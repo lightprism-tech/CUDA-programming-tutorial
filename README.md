@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚀 CUDA Programming Tutorial
+# CUDA Programming Tutorial
 
 **A complete, structured CUDA learning path — from zero GPU knowledge to advanced GPU programming.**
 
@@ -13,7 +13,7 @@
 
 ---
 
-## 📖 Overview
+## Overview
 
 This tutorial teaches CUDA GPU programming from the ground up. You will start with GPU architecture fundamentals, build solid C++ foundations, and progressively work up to writing high-performance CUDA kernels for real-world applications — including deep learning, image processing, and scientific simulations.
 
@@ -21,19 +21,7 @@ This tutorial teaches CUDA GPU programming from the ground up. You will start wi
 
 ---
 
-## 🎯 Who Is This For?
-
-| Audience | What You Will Get |
-| :--- | :--- |
-| 🎓 Students | Structured modules matching university GPU computing curricula |
-| 👨‍💻 Software Engineers | Real benchmarks, real optimizations, production-grade patterns |
-| 🤖 AI/ML Engineers | Neural network kernels, cuBLAS, cuDNN integration |
-| 🎮 Game Developers | Particle systems and physics simulations from scratch |
-| 🔬 Researchers | Profiling, Nsight tools, custom CUDA library development |
-
----
-
-## 📚 What You Will Learn
+## What You Will Learn
 
 - **GPU Architecture** — SMs, warps, CUDA cores, memory hierarchy
 - **C++ Foundations** — Variables, arrays, functions, pointers, dynamic memory
@@ -47,7 +35,7 @@ This tutorial teaches CUDA GPU programming from the ground up. You will start wi
 
 ---
 
-## 🗺️ Full Learning Roadmap
+## Full Learning Roadmap
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -85,44 +73,44 @@ This tutorial teaches CUDA GPU programming from the ground up. You will start wi
 
 ---
 
-## 📋 Module Index
+## Module Index
 
 ### Phase 1 — Foundations
 
 | Module | Title | Topics | Time | Status |
 | :---: | :--- | :--- | :---: | :---: |
-| **01** | [GPU Fundamentals](lectures/module-01-gpu-fundamentals/README.md) | CPU vs GPU, SMs, Warps, SIMT, Thread hierarchy, Memory hierarchy, Deep Learning performance bounds | ~2h | ✅ Ready |
-| **02** | [C++ Basics for CUDA](lectures/module-02-cpp-basics/README.md) | Variables, data types, loops, functions, arrays, pointers intro, dynamic memory | ~2h | ✅ Ready |
-| **03** | [C++ Pointers & Memory](lectures/module-03-pointers-and-memory/README.md) | Stack vs Heap, pointer arithmetic, references, smart pointers, memory safety | ~3h | ✅ Ready |
-| **04** | [CUDA Setup & Toolchain](lectures/module-04-cuda-setup/README.md) | CUDA Toolkit install (Win/Linux), cuDNN, nvcc compiler, VS Code, Hello CUDA | ~1.5h | ✅ Ready |
+| **01** | [GPU Fundamentals](lectures/module-01-gpu-fundamentals/README.md) | CPU vs GPU, SMs, Warps, SIMT, Thread hierarchy, Memory hierarchy, Deep Learning performance bounds | ~2h | Ready |
+| **02** | [C++ Basics for CUDA](lectures/module-02-cpp-basics/README.md) | Variables, data types, loops, functions, arrays, pointers intro, dynamic memory | ~2h | Ready |
+| **03** | [C++ Pointers & Memory](lectures/module-03-pointers-and-memory/README.md) | Stack vs Heap, pointer arithmetic, references, smart pointers, memory safety | ~3h | Ready |
+| **04** | [CUDA Setup & Toolchain](lectures/module-04-cuda-setup/README.md) | CUDA Toolkit install (Win/Linux), cuDNN, nvcc compiler, VS Code, Hello CUDA | ~1.5h | Ready |
 
 ### Phase 2 — Core Programming
 
 | Module | Title | Topics | Time | Status |
 | :---: | :--- | :--- | :---: | :---: |
-| **05** | [Threads, Blocks & Grids](lectures/module-05-threads-blocks-grids/README.md) | Threads, warps, warp divergence, `__syncthreads()`, block dims, shared memory, occupancy, grid patterns | ~3h | ✅ Ready |
-| **06** | Memory Model | Global, shared, constant, texture, unified memory | ~4h | 🔜 Coming |
-| **07** | Kernel Optimization | Coalescing, tiling, bank conflicts, loop unrolling | ~5h | 🔜 Coming |
+| **05** | [Threads, Blocks & Grids](lectures/module-05-threads-blocks-grids/README.md) | Threads, warps, warp divergence, `__syncthreads()`, block dims, shared memory, occupancy, grid patterns | ~3h | Ready |
+| **06** | [Memory Model](lectures/module-06-memory-model/README.md) | Global, shared, constant, texture, unified memory, coalescing | ~4h | Ready |
+| **07** | [Kernel Optimization](lectures/module-07-kernel-optimization/README.md) | Function qualifiers, launch config, streams, error handling, Gaussian blur | ~5h | Ready |
 
 ### Phase 3 — Intermediate
 
 | Module | Title | Topics | Time | Status |
 | :---: | :--- | :--- | :---: | :---: |
-| **08** | Streams & Concurrency | CUDA streams, pinned memory, cudaEvent timing | ~3h | 🔜 Coming |
-| **09** | CUDA Libraries | Thrust, cuBLAS, cuFFT, cuRAND, CUTLASS | ~4h | 🔜 Coming |
+| **08** | Streams & Concurrency | CUDA streams, pinned memory, cudaEvent timing | ~3h | Planned |
+| **09** | CUDA Libraries | Thrust, cuBLAS, cuFFT, cuRAND, CUTLASS | ~4h | Planned |
 
 ### Phase 4 — Advanced
 
 | Module | Title | Topics | Time | Status |
 | :---: | :--- | :--- | :---: | :---: |
-| **10** | Multi-GPU Programming | Peer-to-peer, NVLink, NCCL, data partitioning | ~4h | 🔜 Coming |
-| **11** | Advanced CUDA | CUDA Graphs, cooperative groups, dynamic parallelism | ~5h | 🔜 Coming |
+| **10** | Multi-GPU Programming | Peer-to-peer, NVLink, NCCL, data partitioning | ~4h | Planned |
+| **11** | Advanced CUDA | CUDA Graphs, cooperative groups, dynamic parallelism | ~5h | Planned |
 
 **Total estimated time: ~36.5 hours**
 
 ---
 
-## 🎓 Student Journey
+## Student Journey
 
 Follow this path in order for the best learning experience:
 
@@ -142,9 +130,10 @@ Step 11 →  Module 11: Advanced CUDA            (Production-grade techniques)
 
 ---
 
-## 🛤️ Learning Paths
+## Learning Paths
 
-### 🟢 Beginner Path
+### Beginner Path
+
 > New to GPU programming? Start here.
 
 ```
@@ -153,7 +142,8 @@ Time: ~11.5 hours
 Goal: Understand GPU architecture and write your first CUDA kernels
 ```
 
-### 🟡 Intermediate Path
+### Intermediate Path
+
 > Comfortable writing kernels? Level up.
 
 ```
@@ -162,7 +152,8 @@ Time: ~15 hours
 Goal: Write fast, optimized CUDA code
 ```
 
-### 🔴 Advanced Path
+### Advanced Path
+
 > Ready for production-grade CUDA?
 
 ```
@@ -171,7 +162,8 @@ Time: ~13 hours
 Goal: Multi-GPU, custom libraries, and advanced techniques
 ```
 
-### ⚡ AI/ML Engineer Fast Track
+### AI/ML Engineer Fast Track
+
 > Already know C++? Jump straight to GPU-accelerated deep learning.
 
 ```
@@ -182,24 +174,24 @@ Goal: GPU-accelerated neural network operations with cuBLAS and cuDNN
 
 ---
 
-## 🏗️ Projects Timeline
+## Projects Timeline
 
 | # | Project | After Module | Difficulty |
 | :---: | :--- | :---: | :---: |
-| 01 | Vector Addition | 04 | ⭐ |
-| 02 | Matrix Addition | 05 | ⭐ |
-| 03 | Matrix Multiplication | 06 | ⭐⭐ |
-| 04 | Image Processing Pipeline | 06 | ⭐⭐ |
-| 05 | 2D Convolution | 07 | ⭐⭐⭐ |
-| 06 | Particle Simulation | 08 | ⭐⭐⭐ |
-| 07 | GPU Ray Tracer | 09 | ⭐⭐⭐⭐ |
-| 08 | Neural Network from Scratch | 10 | ⭐⭐⭐⭐ |
-| 09 | Physics Simulation Engine | 10 | ⭐⭐⭐⭐ |
-| 10 | GPU Database Engine | 11 | ⭐⭐⭐⭐⭐ |
+| 01 | Vector Addition | 04 | Beginner |
+| 02 | Matrix Addition | 05 | Beginner |
+| 03 | Matrix Multiplication | 06 | Intermediate |
+| 04 | Image Processing Pipeline | 06 | Intermediate |
+| 05 | 2D Convolution | 07 | Advanced |
+| 06 | Particle Simulation | 08 | Advanced |
+| 07 | GPU Ray Tracer | 09 | Expert |
+| 08 | Neural Network from Scratch | 10 | Expert |
+| 09 | Physics Simulation Engine | 10 | Expert |
+| 10 | GPU Database Engine | 11 | Expert |
 
 ---
 
-## ✅ Progress Tracker
+## Progress Tracker
 
 Copy this into your own notes and check boxes as you complete each item:
 
@@ -240,33 +232,37 @@ Copy this into your own notes and check boxes as you complete each item:
 
 ---
 
-## 🗂️ Repository Structure
+## Repository Structure
 
 ```
 cuda-programming-tutorial/
 │
-├── 📖 lectures/               ← Main learning content (start here)
+├── lectures/               Main learning content (start here)
 │   ├── module-01-gpu-fundamentals/
 │   ├── module-02-cpp-basics/
 │   ├── module-03-pointers-and-memory/
-│   └── module-04-cuda-setup/
+│   ├── module-04-cuda-setup/
+│   ├── module-05-threads-blocks-grids/
+│   ├── module-06-memory-model/
+│   └── module-07-kernel-optimization/
 │
-├── 🏋️ exercises/              ← Practice problems (Easy / Medium / Hard)
-├── 🔨 projects/               ← Complete buildable end-to-end projects
-├── 🧪 quizzes/                ← Self-assessment quizzes per module
-├── ⚡ benchmarks/              ← CPU vs GPU performance comparisons
-├── 📝 cheatsheets/            ← Quick-reference cards
-├── 🗂️ resources/              ← Curated books, videos, papers
-├── 🖼️ diagrams/               ← GPU architecture diagrams
-├── 💡 examples/               ← Minimal runnable code snippets
-└── 📄 docs/                   ← Extended documentation and glossary
+├── exercises/              Practice problems (Easy / Medium / Hard)
+├── projects/               Complete buildable end-to-end projects
+├── quizzes/                Self-assessment quizzes per module
+├── benchmarks/             CPU vs GPU performance comparisons
+├── cheatsheets/            Quick-reference cards
+├── resources/              Curated books, videos, papers
+├── diagrams/               GPU architecture diagrams
+├── examples/               Minimal runnable code snippets
+└── docs/                   Extended documentation and glossary
 ```
 
 ---
 
-## 🔧 Quick Start
+## Quick Start
 
 ### 1. Verify Your Hardware
+
 ```bash
 # Linux
 lspci | grep -i nvidia
@@ -276,15 +272,18 @@ lspci | grep -i nvidia
 ```
 
 ### 2. Install CUDA Toolkit
+
 Visit [developer.nvidia.com/cuda-downloads](https://developer.nvidia.com/cuda-downloads) and select your OS.
 
 ### 3. Verify Installation
+
 ```bash
 nvidia-smi          # Shows GPU info + max supported CUDA version
 nvcc --version      # Shows CUDA compiler version
 ```
 
 ### 4. Compile Your First Program
+
 ```cpp
 // hello.cu
 #include <stdio.h>
@@ -299,13 +298,14 @@ int main() {
     return 0;
 }
 ```
+
 ```bash
 nvcc hello.cu -o hello && ./hello
 ```
 
 ---
 
-## 🔗 Key External Resources
+## Key External Resources
 
 | Resource | Link |
 | :--- | :--- |
@@ -318,7 +318,17 @@ nvcc hello.cu -o hello && ./hello
 
 ---
 
-## 📄 License
+## Contributing
+
+Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on:
+
+- Adding or improving lecture modules
+- Submitting examples, exercises, and projects
+- Code style, testing, and pull request process
+
+---
+
+## License
 
 [MIT](LICENSE) — Free to use, share, and modify for personal and commercial projects.
 
@@ -326,6 +336,6 @@ nvcc hello.cu -o hello && ./hello
 
 <div align="center">
 
-**Start with [Module 01 — GPU Fundamentals](lectures/module-01-gpu-fundamentals/README.md) →**
+**Start with [Module 01 — GPU Fundamentals](lectures/module-01-gpu-fundamentals/README.md)**
 
 </div>
