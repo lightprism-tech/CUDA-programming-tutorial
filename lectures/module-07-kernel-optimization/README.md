@@ -2,7 +2,7 @@
 
 > **Estimated time:** ~5 hours  
 > **Prerequisites:** [Module 06 — Memory Model](../module-06-memory-model/README.md)  
-> **Next module:** [Module 08 — Streams & Concurrency](../module-08-streams-concurrency/README.md) *(coming soon)*
+> **Next module:** [Module 08 — Streams & Concurrency](../module-08-Streams%20&%20Concurrency/README.md)
 
 ---
 

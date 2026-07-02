@@ -96,7 +96,7 @@ This tutorial teaches CUDA GPU programming from the ground up. You will start wi
 
 | Module | Title | Topics | Time | Status |
 | :---: | :--- | :--- | :---: | :---: |
-| **08** | Streams & Concurrency | CUDA streams, pinned memory, cudaEvent timing | ~3h | Planned |
+| **08** | [Streams & Concurrency](lectures/module-08-Streams%20&%20Concurrency/README.md) | CUDA streams, pinned memory, cudaEvent timing | ~3h | Planned |
 | **09** | CUDA Libraries | Thrust, cuBLAS, cuFFT, cuRAND, CUTLASS | ~4h | Planned |
 
 ### Phase 4 — Advanced
