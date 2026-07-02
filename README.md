@@ -97,7 +97,7 @@ This tutorial teaches CUDA GPU programming from the ground up. You will start wi
 | Module | Title | Topics | Time | Status |
 | :---: | :--- | :--- | :---: | :---: |
 | **08** | [Streams & Concurrency](lectures/module-08-Streams%20&%20Concurrency/README.md) | CUDA streams, pinned memory, cudaEvent timing | ~3h | Planned |
-| **09** | CUDA Libraries | Thrust, cuBLAS, cuFFT, cuRAND, CUTLASS | ~4h | Planned |
+| **09** | [CUDA Libraries](/lectures/module-09-CUDA-Libraries/README.md) | Thrust, cuBLAS, cuFFT, cuRAND, CUTLASS | ~4h | Planned |
 
 ### Phase 4 — Advanced
 
@@ -196,39 +196,6 @@ Goal: GPU-accelerated neural network operations with cuBLAS and cuDNN
 Copy this into your own notes and check boxes as you complete each item:
 
 ```markdown
-## My CUDA Progress
-
-### Phase 1 — Foundations
-- [ ] Module 01: GPU Fundamentals
-- [ ] Module 02: C++ Basics for CUDA
-- [ ] Module 03: C++ Pointers & Memory
-- [ ] Module 04: CUDA Setup & Toolchain
-
-### Phase 2 — Core Programming
-- [ ] Module 05: Threads, Blocks & Grids
-- [ ] Module 06: Memory Model
-- [ ] Module 07: Kernel Optimization
-
-### Phase 3 — Intermediate
-- [ ] Module 08: Streams & Concurrency
-- [ ] Module 09: CUDA Libraries
-
-### Phase 4 — Advanced
-- [ ] Module 10: Multi-GPU Programming
-- [ ] Module 11: Advanced CUDA
-
-### Projects
-- [ ] Project 01: Vector Addition
-- [ ] Project 02: Matrix Addition
-- [ ] Project 03: Matrix Multiplication
-- [ ] Project 04: Image Processing Pipeline
-- [ ] Project 05: 2D Convolution
-- [ ] Project 06: Particle Simulation
-- [ ] Project 07: GPU Ray Tracer
-- [ ] Project 08: Neural Network from Scratch
-- [ ] Project 09: Physics Simulation Engine
-- [ ] Project 10: GPU Database Engine
-```
 
 ---
 
@@ -256,8 +223,7 @@ cuda-programming-tutorial/
 ├── examples/               Minimal runnable code snippets
 └── docs/                   Extended documentation and glossary
 ```
-
----
+--
 
 ## Quick Start
 

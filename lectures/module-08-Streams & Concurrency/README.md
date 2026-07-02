@@ -5,9 +5,9 @@
 > **Next module:** [module 09-CUDA-libraries](/lectures/module-09-CUDA-Libraries/README.md)
 
 
-# CUDA Streams & Concurrency — Deep Dive with Simple Examples
+# CUDA Streams & Concurrency — Deep Dive
 
-Explaining CUDA streams, pinned memory, and cudaEvent timing using everyday analogies and beginner-friendly code examples.
+Explaining CUDA streams, pinned memory, and cudaEvent timing using everyday analogies
 
 ---
 
