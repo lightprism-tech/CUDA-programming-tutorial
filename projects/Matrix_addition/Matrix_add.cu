@@ -4,7 +4,7 @@
 #include <sstream>
 #include <string>
 #include <vector>
-
+#include <chrono>
 
 using namespace std;
 
@@ -17,8 +17,7 @@ __global__ void matrixAdd(float *A, float *B, float *C, int rows, int cols)
     {
         int index = row * cols + col;
         C[index] = A[index] + B[index];
-    }   
-
+    }
 }
 
 bool readCSV(const string &filename,
@@ -117,8 +116,8 @@ bool readCSV(const string &filename,
     return true;
 }
 
-void writeCSV(const string& filename,
-              const vector<float>& matrix,
+void writeCSV(const string &filename,
+              const vector<float> &matrix,
               int rows,
               int cols)
 {
@@ -160,33 +159,28 @@ void writeCSV(const string& filename,
 
 int main()
 {
-    //  ifstream csvAfile("./matrix_A.csv");
-    //  ifstream csvBfile("./matrix_B.csv");
-
 
     int rows = 1000;
-    int cols = 1000; 
+    int cols = 1000;
 
     vector<float> h_A(rows * cols);
     vector<float> h_B(rows * cols);
     vector<float> h_C(rows * cols);
 
-if (!readCSV("matrix_A.csv", h_A, rows, cols))
+    if (!readCSV("matrix_A.csv", h_A, rows, cols))
     {
         cout << "Failed to read matrix A" << endl;
         return 1;
     }
 
-if (!readCSV("matrix_B.csv", h_B, rows, cols))
+    if (!readCSV("matrix_B.csv", h_B, rows, cols))
     {
         cout << "Failed to read matrix B" << endl;
         return 1;
     }
 
-cout << "A[0] = " << h_A[0] << endl;
-cout << "B[0] = " << h_B[0] << endl;
-
-
+    cout << "A[0] = " << h_A[0] << endl;
+    cout << "B[0] = " << h_B[0] << endl;
 
     // matrixAdd<<<1, 1>>>(nullptr, nullptr, nullptr, 0, 0); // Dummy kernel launch to initialize CUDA runtime
     float *d_A;
@@ -215,48 +209,59 @@ cout << "B[0] = " << h_B[0] << endl;
         return 1;
     }
 
-cudaMemcpy(d_A,
-           h_A.data(),
-           rows * cols * sizeof(float),
-           cudaMemcpyHostToDevice);  
-cudaMemcpy(d_B,
-           h_B.data(),
-           rows * cols * sizeof(float),
-           cudaMemcpyHostToDevice);
+    cudaMemcpy(d_A,
+               h_A.data(),
+               rows * cols * sizeof(float),
+               cudaMemcpyHostToDevice);
+    cudaMemcpy(d_B,
+               h_B.data(),
+               rows * cols * sizeof(float),
+               cudaMemcpyHostToDevice);
 
-        dim3 block(16,16);
+    dim3 block(16, 16);
 
-        dim3 grid(
-    (cols + block.x - 1) / block.x,
-    (rows + block.y - 1) / block.y
-);
+    dim3 grid(
+        (cols + block.x - 1) / block.x,
+        (rows + block.y - 1) / block.y);
 
-        matrixAdd<<<grid, block>>>(d_A, d_B, d_C, rows, cols);
-        cudaError_t kernelErr = cudaGetLastError();
-        if (kernelErr != cudaSuccess)
-        {
-            cudaDeviceSynchronize();
-        }
-        cudaError_t memcpyErr = cudaMemcpy(h_C.data(),
-                                           d_C,
-                                           rows * cols * sizeof(float),
-                                           cudaMemcpyDeviceToHost);
-        if (memcpyErr != cudaSuccess)
-        {
-            cout << "Failed to copy result from device to host" << endl;
-        }
-            
-            writeCSV("matrix_C.csv", h_C, rows, cols);
+    cudaEvent_t start, stop;
+    cudaEventCreate(&start);
+    cudaEventCreate(&stop);
+    cudaEventRecord(start);
 
-            cout << "C[0] = " << h_C[0] << endl;
-cout << "C[1] = " << h_C[1] << endl;
-cout << "C[2] = " << h_C[2] << endl;
+    matrixAdd<<<grid, block>>>(d_A, d_B, d_C, rows, cols);
+    cudaEventRecord(stop);
+    cudaEventSynchronize(stop);
 
-            cudaFree(d_A);
-            cudaFree(d_B);
-            cudaFree(d_C);
+    float milliseconds = 0;
+    cudaEventElapsedTime(&milliseconds, start, stop);
 
+    cout << "Time taken for matrix addition: " << milliseconds << " ms" << endl;
 
+    cudaError_t kernelErr = cudaGetLastError();
+    if (kernelErr != cudaSuccess)
+    {
+        cudaDeviceSynchronize();
+    }
 
+    cudaError_t memcpyErr = cudaMemcpy(h_C.data(),
+                                       d_C,
+                                       rows * cols * sizeof(float),
+                                       cudaMemcpyDeviceToHost);
+    if (memcpyErr != cudaSuccess)
+    {
+        cout << "Failed to copy result from device to host" << endl;
+    }
 
+    writeCSV("matrix_C.csv", h_C, rows, cols);
+
+    cout << "C[0] = " << h_C[0] << endl;
+    cout << "C[1] = " << h_C[1] << endl;
+    cout << "C[2] = " << h_C[2] << endl;
+
+    cudaFree(d_A);
+    cudaFree(d_B);
+    cudaFree(d_C);
+
+    return 0;
 }
