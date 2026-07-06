@@ -2,7 +2,9 @@
 
 > **Estimated time:** ~5 hours  
 > **Prerequisites:** [module-8 Streams & Concurrency](/lectures/module-08-Streams%20&%20Concurrency/README.md)  
-> **Next module:** comings soon
+> **Next module:**[module-10 Multi-GPU Programming ](/lectures/module-10-Multi-GPU%20Programming/README.md)
+
+
 # CUDA Libraries 
 
 Each library below follows the same structure:
@@ -173,7 +175,7 @@ int main() {
 
 ### Step-by-step
 1. Instead of storing a full grid of numbers, you store only 3 things: which row, which column, and the value — for every non-zero entry.
-2. cuSPARSE reads this compact list and performs multiplication only where there's an actual number.
+2. cuSPARSE reads this compact list and performs multiplication only where there 's an actual number.
 3. Zeros are skipped entirely, saving huge amounts of time and memory.
 
 ### Real-world use
@@ -498,3 +500,5 @@ Almost every CUDA library follows the same basic recipe:
 6. **Clean up** (destroy handles, free memory)
 
 Once you recognize this pattern, every CUDA library — no matter which one — becomes much easier to read and use.
+
+ ***Next module:***  [ module-10 Multi-GPU Programming ](/lectures/module-10-Multi-GPU%20Programming/README.md)
